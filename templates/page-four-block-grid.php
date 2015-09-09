@@ -17,8 +17,10 @@ if ( !$top_image && !$bottom_image ) return;
 				<img src="<?php echo $top_image; ?>" class="img-responsive ">
 			</div>
 			<div class="grid-content grid-right col-sm-6">
-				<p class="headline"><?php echo $top_title; ?></p>
-				<a class="grid-link" href="<?php echo $top_link; ?>"><?php echo $top_link_text; ?></a>
+				<div class="grid-content-wrapper">
+					<p class="headline"><?php echo $top_title; ?></p>
+					<a class="grid-link" href="<?php echo $top_link; ?>"><?php echo $top_link_text; ?></a>
+				</div>
 			</div>
 		</div><!-- /.top-row -->
 		<div class="row bottom-row">
@@ -26,8 +28,10 @@ if ( !$top_image && !$bottom_image ) return;
 				<img src="<?php echo $bottom_image; ?>" class="img-responsive ">
 			</div>
 			<div class="grid-content grid-left col-sm-6 col-sm-pull-6">
-				<p class="headline"><?php echo $bottom_title; ?></p>
-				<a class="grid-link" href="<?php echo $bottom_link; ?>"><?php echo $bottom_link_text; ?></a>
+				<div class="grid-content-wrapper">
+					<p class="headline"><?php echo $bottom_title; ?></p>
+					<a class="grid-link" href="<?php echo $bottom_link; ?>"><?php echo $bottom_link_text; ?></a>
+				</div>
 			</div>
 		</div><!-- /.bottom-row -->
 	</div><!-- /.container -->

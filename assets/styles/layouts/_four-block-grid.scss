@@ -15,8 +15,18 @@
 @media (min-width: $screen-sm-min) {
 
 	.four-block-grid {
-		.row {
-			max-width: 1170px;
+		
+		.grid-left img,
+		.grid-left .grid-content-wrapper {
+			max-width: 585px;
+			float: right;
 		}
+
+		.grid-right img,
+		.grid-right .grid-content-wrapper {
+			max-width: 585px;
+			float: left;
+		}
+
 	}
 }
