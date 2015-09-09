@@ -22,7 +22,7 @@ $columns = $image ? 'col-sm-4' : 'col-sm-12';
 	<main class="row" role="main">
 	<?php if ( $image ) : ?>
 		<div class="image-container col-sm-8">
-			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+			<img src="<?php echo $image['url']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>">
 		</div>
 	<?php endif; ?>
 		<div class="content-container <?php echo $columns; ?>">
@@ -31,9 +31,9 @@ $columns = $image ? 'col-sm-4' : 'col-sm-12';
 		<?php endif; ?>
 			<p class="masterplan-content"><?php echo $content; ?></p>
 		<?php if ( $button_type === 'image' ) : ?>
-			<a href="<?php echo $button_link; ?>" title="View the Masterplan" data-featherlight="image" class="button masterplan-button"><?php echo $button_text; ?></a>
+			<a href="<?php echo $button_link; ?>" title="View the Masterplan" data-featherlight="image" class="btn btn-default masterplan-button"><?php echo $button_text; ?></a>
 		<?php else : ?>
-			<a href="<?php echo $button_link; ?>" class="button masterplan-button page-button"><?php echo $button_text; ?></a>
+			<a href="<?php echo $button_link; ?>" class="btn btn-default masterplan-button page-button"><?php echo $button_text; ?></a>
 		<?php endif; ?>
 		</div>
 	</main>
