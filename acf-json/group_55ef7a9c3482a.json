@@ -1,6 +1,6 @@
 {
     "key": "group_55ef7a9c3482a",
-    "title": "4x4 Block Grid",
+    "title": "4 Block Grid",
     "fields": [
         {
             "key": "field_55ef7af246781",
@@ -154,5 +154,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1441760139
+    "modified": 1441770439
 }
