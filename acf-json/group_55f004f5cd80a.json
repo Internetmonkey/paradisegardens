@@ -1,0 +1,76 @@
+{
+    "key": "group_55f004f5cd80a",
+    "title": "Enquiry \/ Contact Form",
+    "fields": [
+        {
+            "key": "field_55f0050ca8f38",
+            "label": "Show Contact Form?",
+            "name": "show_contact_form",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Yes",
+                "false": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "true",
+            "layout": "vertical"
+        },
+        {
+            "key": "field_55f0055ca8f39",
+            "label": "Select Contact Form",
+            "name": "select_contact_form",
+            "type": "page_link",
+            "instructions": "The contact forms and their settings can be managed via the \"Contact\" menu item in the admin menu. ",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_55f0050ca8f38",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "wpcf7_contact_form"
+            ],
+            "taxonomy": [
+
+            ],
+            "allow_null": 0,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 20,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1441806259
+}
