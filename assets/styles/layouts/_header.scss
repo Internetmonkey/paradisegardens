@@ -1,0 +1,25 @@
+// Admin Bar Allowances 
+
+body.admin-bar {
+	margin-top: 32px;
+
+	.navbar-fixed-top {
+		top: 32px;
+	}
+
+	@media screen and (max-width: 782px) {
+
+		margin-top: 48px;
+
+		.navbar-fixed-top {
+		top: 48px;
+		}
+
+	}
+}
+
+.navbar-toggle {
+	float: left;
+	margin-left: 15px;
+	margin-right: 0;
+}

@@ -1,0 +1,22 @@
+.four-block-grid {
+	.top-row {
+		background-color: $green;
+	}
+
+	.bottom-row {
+		background-color: $pink;
+	}
+
+	.grid-image {
+		padding: 0;
+	}
+}
+
+@media (min-width: $screen-sm-min) {
+
+	.four-block-grid {
+		.row {
+			max-width: 1170px;
+		}
+	}
+}
