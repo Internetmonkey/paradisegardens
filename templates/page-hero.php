@@ -7,17 +7,17 @@
 	if ( !$headline && !$image ) return;
 ?>
 
-<?php if ( $image ): ?>
+<?php if ( $image ) : ?>
 <div class="hero hero-image" style="background-image: url(<?php echo $image ?>);">
 <?php else: ?>
 <div class="hero no-image">
 <?php endif; ?>
 	<div class="container">
 		<div class="row">
-		<?php if ($headline): ?>
+		<?php if ( $headline ) : ?>
 			<div class="headline-container col-md-3">
 				<h1 class="headline"><?php echo $headline; ?></h1>
-			<?php if ($sub): ?>
+			<?php if ( $sub ) : ?>
 				<p class="sub-headline"><?php echo $sub; ?></p>
 			<?php endif; ?>
 			</div><!-- /.headline-container -->
