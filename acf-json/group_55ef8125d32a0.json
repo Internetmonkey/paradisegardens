@@ -53,7 +53,7 @@
             "name": "master_plan_content",
             "type": "textarea",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -117,7 +117,7 @@
             "name": "master_plan_image",
             "type": "image",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -149,7 +149,7 @@
             "name": "master_plan_button_link",
             "type": "page_link",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": [
                 [
                     {
@@ -198,5 +198,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1441811599
+    "modified": 1441815360
 }
