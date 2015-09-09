@@ -24,19 +24,23 @@
         // JavaScript to be fired on all pages, after page specific JS is fired
       }
     },
-    // Home page
-    'home': {
+    // Explore page
+    'explore': {
       init: function() {
-        // JavaScript to be fired on the home page
+        // JavaScript to be fired on the explore page
+        $('.image-slider').slick();
+        $('.text-slider').slick();
       },
       finalize: function() {
-        // JavaScript to be fired on the home page, after the init JS
+        // JavaScript to be fired on the explore page, after the init JS
       }
     },
-    // About us page, note the change from about-us to about_us.
-    'about_us': {
+    // Leasing Page
+    'leasing': {
       init: function() {
-        // JavaScript to be fired on the about us page
+        // JavaScript to be fired on the leasing page
+        $('.image-slider').slick();
+        $('.text-slider').slick();
       }
     }
   };
