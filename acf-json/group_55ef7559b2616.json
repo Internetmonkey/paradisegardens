@@ -1,0 +1,200 @@
+{
+    "key": "group_55ef7559b2616",
+    "title": "Image & Content Slider",
+    "fields": [
+        {
+            "key": "field_55ef756c013e0",
+            "label": "Activate Slider for this page?",
+            "name": "slider_active",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Yes",
+                "false": "No"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "false",
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_55ef76b5013e5",
+            "label": "Auto Rotate Slides?",
+            "name": "slider_auto",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_55ef756c013e0",
+                        "operator": "!=",
+                        "value": "false"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        },
+        {
+            "key": "field_55ef76de013e6",
+            "label": "Slide Rotation Delay",
+            "name": "slider_delay",
+            "type": "number",
+            "instructions": "The number of milliseconds each slide is shown for before rotating to the next. 5000ms = 5 seconds. ",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_55ef756c013e0",
+                        "operator": "!=",
+                        "value": "false"
+                    },
+                    {
+                        "field": "field_55ef76b5013e5",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 6000,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 4500,
+            "max": "",
+            "step": 500,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_55ef75f1013e1",
+            "label": "Slides",
+            "name": "slider_slides",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_55ef756c013e0",
+                        "operator": "!=",
+                        "value": "false"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": 1,
+            "max": "",
+            "layout": "block",
+            "button_label": "Add Slide",
+            "sub_fields": [
+                {
+                    "key": "field_55ef762b013e2",
+                    "label": "Slide Image",
+                    "name": "slide_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "full",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_55ef765a013e3",
+                    "label": "Slide Headline",
+                    "name": "slide_headline",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": 30,
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_55ef766e013e4",
+                    "label": "Slide Content",
+                    "name": "slide_content",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1441760154
+}
