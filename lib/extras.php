@@ -31,3 +31,12 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+function options_page() {
+  if( function_exists('acf_add_options_page') ) {
+    $args = array( 'page_title' => 'Site Options', );
+    acf_add_options_page( $args );
+  }
+}
+
+add_action("wp_loaded", __NAMESPACE__ . '\\options_page');
