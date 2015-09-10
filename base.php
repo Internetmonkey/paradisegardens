@@ -28,6 +28,11 @@ use Roots\Sage\Wrapper;
           </aside><!-- /.sidebar -->
         <?php endif; ?>
     </div><!-- /.wrap -->
+
+    <?php get_template_part('templates/footer', 'contact'); ?>
+    <?php get_template_part('templates/footer', 'signup'); ?>
+    <?php get_template_part('templates/footer', 'social'); ?>
+
     <?php
       do_action('get_footer');
       get_template_part('templates/footer');
