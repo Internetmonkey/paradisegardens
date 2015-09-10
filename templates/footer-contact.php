@@ -9,7 +9,7 @@ if ( $form ) {
 	$_title = $form->post_title;
 }
 ?>
-<div id="contact" class="contact">
+<div id="contact" class="contact page-section">
 	<div class="container">
 	<?php if ( $headline && $content ) : ?>
 		<div class="row">
