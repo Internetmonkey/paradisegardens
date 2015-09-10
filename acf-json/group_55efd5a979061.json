@@ -94,7 +94,7 @@
                     "default_value": "null",
                     "save_format": "element",
                     "allow_null": 0,
-                    "enqueue_fa": 0,
+                    "enqueue_fa": 1,
                     "fa_live_preview": "",
                     "choices": {
                         "null": "- Select -",
@@ -705,5 +705,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1441806336
+    "modified": 1441889351
 }
