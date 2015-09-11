@@ -1,0 +1,22 @@
+.double-column {
+	@include breakpoint(sm) {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+
+    -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 30px; /* Firefox */
+    column-gap: 30px;
+
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+
+               min-height: 0;
+	}
+	
+}
+
+.contact-before {
+	margin-bottom: 1.5em;
+}

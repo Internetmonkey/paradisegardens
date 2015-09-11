@@ -32,27 +32,9 @@
 }
 
 
-/* Custom arrow sits on top of the select - could be an image, SVG, icon font, etc. or the arrow could just baked into the bg image on the select. Note this si a 2x image so it will look bad in browsers that don't support background-size. In production, you'd handle this resolution switch via media query but this is a demo. */
-    
-// .custom-select::after {
-//   content: "";
-//   position: absolute;
-//   width: 9px;
-//   height: 8px;
-//   top: 50%;
-//   right: 1em;
-//   margin-top:-4px;
-//   background-image: url(http://filamentgroup.com/files/select-arrow.png);
-//   background-repeat: no-repeat;
-//   background-size: 100%;
-//   z-index: 2;
-//   /* This hack make the select behind the arrow clickable in some browsers */
-//   pointer-events:none;
-// }
-
 
 .custom-select:after {
-  top: 45px;
+  top: 45%;
   right: 20px;
   border: solid transparent;
   content: " ";

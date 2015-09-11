@@ -211,11 +211,19 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
-  // Add class to drop down menus for custom styles
-  $('select').addClass("custom-select");
+  // Add wrapping class to drop down menus for custom styles
+  $( "select" ).wrap( "<div class='custom-select'></div>" );
 
   // Match height of grid tiles
   $('.grid-match').matchHeight();
+
+
+  $('a').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top + -130
+                }, 500);
+                return false;
+            });
 
   // Initialise wow
   wow = new WOW({

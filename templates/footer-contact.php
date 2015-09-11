@@ -13,7 +13,7 @@ if ( $form ) {
 	<div class="container">
 	<?php if ( $headline && $content ) : ?>
 		<div class="row">
-			<div class="contact-before col-md-8 col-md-offset-2 text-center">
+			<div class="contact-before col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
 				<h2 class="contact-headline headline"><?php echo $headline; ?></h2>
 				<div class="contact-content"><?php echo $content; ?></div>
 			</div>

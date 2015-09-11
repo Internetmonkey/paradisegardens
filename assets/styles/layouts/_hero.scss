@@ -5,6 +5,9 @@
 	@include breakpoint(md) {
 		height: 75vh;
 	}
+	.headline, .sub-headline {
+		color: $white;
+	}
 }
 
 .hero-image {
@@ -14,10 +17,4 @@
 
 }
 
-.title-container {
-	display: table-cell;
-	vertical-align: top;
-	width: 100%;
-	color: $white;
-	padding: 8em 0;
-}
+
