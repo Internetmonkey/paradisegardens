@@ -25,6 +25,6 @@
     }
   },
   "config": {
-    "devUrl": "http://www.paradisegarden.dev"
+    "devUrl": "http://localhost:8888/"
   }
 }

@@ -4,8 +4,8 @@
 
 ?>
 
-<header class="banner" role="banner">
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<header class="banner" role="banner"  data-spy="affix" data-offset-top="60">
+<nav class="navbar navbar-default " role="navigation">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".pg-nav-collapse">
@@ -16,7 +16,7 @@
       </button>
 
       <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-          <?php bloginfo('name'); ?>
+          <span class="sr-only"><?php bloginfo('name'); ?></span>
       </a>
     </div>
 

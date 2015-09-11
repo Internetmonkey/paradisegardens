@@ -1,1 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
+body {
+	font-family: 'Lato', sans-serif;
+	color: $black;
+}
+.wrap {
+	max-width: 1400px;
+	margin: 40px auto 0 auto;
+	z-index: 1;
+	position: relative;
+	@include breakpoint(sm) {
+		margin: 130px auto 0 auto;
+	}
+}

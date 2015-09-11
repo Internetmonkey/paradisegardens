@@ -1,8 +1,12 @@
 .hero {
 	min-height: 600px;
+	@include breakpoint(md) {
+		height: 75vh;
+	}
 }
 
 .hero-image {
 	background-repeat: no-repeat;
-	background-size: cover; 
+	background-size: cover;
+
 }

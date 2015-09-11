@@ -3,7 +3,7 @@
 body.admin-bar {
 	margin-top: 32px;
 
-	.navbar-fixed-top {
+	.banner {
 		top: 32px;
 	}
 
@@ -11,7 +11,7 @@ body.admin-bar {
 
 		margin-top: 48px;
 
-		.navbar-fixed-top {
+		.banner {
 		top: 48px;
 		}
 
@@ -23,3 +23,84 @@ body.admin-bar {
 	margin-left: 15px;
 	margin-right: 0;
 }
+
+.banner {
+	position: fixed;
+	left:0;
+	right: 0;
+	top:0;
+	width: 100%;
+	background: $white;
+	z-index: 10;
+	transition: .1s all ease;
+	&.affix-top {
+		padding: 30px 0 0;
+	}
+	&.affix {
+		padding: 10px 0 0;
+	}
+}
+.navbar {
+	margin: 0;
+	border: none;
+}
+.navbar-default {
+	background: $white;
+	text-align: center;
+	border-radius: 0;
+	border: none;
+}
+.navbar-header {
+	float:none;
+}
+
+.navbar-brand {
+	float: none;
+	display: inline-block;
+	padding:0;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(../../assets/images/pg_logo.svg);
+	transition: .1s all ease;
+	.affix-top & {
+			width: 260px;
+			height: 33px;
+		}
+		
+		.affix & {
+			width: 260px;
+			height: 33px;
+		}
+
+	@include breakpoint(sm) {
+		.affix-top & {
+			width: 400px;
+			height: 50px;
+			margin-bottom: 20px;
+		}
+		
+		.affix & {
+			width: 336px;
+			height: 42px;
+			margin-bottom: 10px;
+		}
+	}
+	
+	
+}
+
+.navbar-nav {
+	float: none;
+	text-align: center;
+	font-weight: 300;
+	>li {
+		float: none;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+
+	}
+}
+
+
