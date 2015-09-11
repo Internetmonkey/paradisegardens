@@ -211,4 +211,19 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+
+
+  // Match height of grid tiles
+  $('.grid-match').matchHeight();
+
+  // Initialise wow
+  wow = new WOW({
+    boxClass:     'wow',      // default
+    animateClass: 'animated', // default
+    offset:       0,          // default
+    mobile:       false,       // default
+    live:         true        // default
+  });
+  wow.init();
+
 })(jQuery); // Fully reference jQuery after this point.

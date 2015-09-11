@@ -10,27 +10,31 @@ $bottom_link_text = get_field('block_grid_bottom_link_text');
 
 if ( !$top_image && !$bottom_image ) return; 
 ?>
-<div class="four-block-grid">
+<div class="four-block-grid ">
 	<div class="container-fluid">
-		<div class="row top-row">
-			<div class="grid-image grid-left col-sm-6">
+		<div class="row top-row wow fadeInLeft">
+			<div class="grid-image grid-left col-sm-6 grid-match">
 				<img src="<?php echo $top_image; ?>" class="img-responsive ">
 			</div>
-			<div class="grid-content grid-right col-sm-6">
-				<div class="grid-content-wrapper">
-					<p class="headline"><?php echo $top_title; ?></p>
-					<a class="grid-link" href="<?php echo $top_link; ?>"><?php echo $top_link_text; ?></a>
+			<div class="grid-content grid-right col-sm-6 grid-match">
+				<div class="grid-content-wrapper text-center">
+					<a class="grid-link" href="<?php echo $top_link; ?>">
+					<h2 class="headline"><?php echo $top_title; ?></h2>
+					<span class="more-link"><?php echo $top_link_text; ?></span>
+					</a>
 				</div>
 			</div>
 		</div><!-- /.top-row -->
-		<div class="row bottom-row">
-			<div class="grid-image grid-right col-sm-6 col-sm-push-6">
+		<div class="row bottom-row wow fadeInRight">
+			<div class="grid-image grid-right col-sm-6 col-sm-push-6 grid-match">
 				<img src="<?php echo $bottom_image; ?>" class="img-responsive ">
 			</div>
-			<div class="grid-content grid-left col-sm-6 col-sm-pull-6">
-				<div class="grid-content-wrapper">
-					<p class="headline"><?php echo $bottom_title; ?></p>
-					<a class="grid-link" href="<?php echo $bottom_link; ?>"><?php echo $bottom_link_text; ?></a>
+			<div class="grid-content grid-left col-sm-6 col-sm-pull-6 grid-match">
+				<div class="grid-content-wrapper text-center">
+					<a class="grid-link" href="<?php echo $bottom_link; ?>">
+					<h2 class="headline"><?php echo $bottom_title; ?></h2>
+					<span class="more-link"><?php echo $bottom_link_text; ?></span>
+				</a>
 				</div>
 			</div>
 		</div><!-- /.bottom-row -->

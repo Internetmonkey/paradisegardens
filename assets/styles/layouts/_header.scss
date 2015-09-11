@@ -34,10 +34,18 @@ body.admin-bar {
 	z-index: 10;
 	transition: .1s all ease;
 	&.affix-top {
-		padding: 30px 0 0;
+		padding: 10px 0 0;
+		@include breakpoint(sm) {
+			padding: 30px 0 0;
+		}
+		
+		@include breakpoint(md) {
+			padding: 40px 0 0;
+		}
 	}
 	&.affix {
 		padding: 10px 0 0;
+		border-bottom: 1px solid $gray-lighter;
 	}
 }
 .navbar {
@@ -83,10 +91,22 @@ body.admin-bar {
 		.affix & {
 			width: 336px;
 			height: 42px;
-			margin-bottom: 10px;
+			margin-bottom: 11px;
 		}
 	}
-	
+	@include breakpoint(md) {
+		.affix-top & {
+			width: 500px;
+			height: 63px;
+			margin-bottom: 30px;
+		}
+		
+		.affix & {
+			width: 336px;
+			height: 42px;
+			margin-bottom: 11px;
+		}
+	}
 	
 }
 
@@ -94,11 +114,19 @@ body.admin-bar {
 	float: none;
 	text-align: center;
 	font-weight: 300;
+	@include breakpoint(sm) {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
 	>li {
-		float: none;
-		display: inline-block;
+		
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
+		@include breakpoint(sm) {
+			float: none;
+			display: inline-block;
+		}
 
 	}
 }

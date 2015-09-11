@@ -7,10 +7,12 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.5",
+    "featherlight": "~1.3.3",
+    "matchHeight": "~0.6.0",
+    "modernizr": "2.8.2",
     "slick-carousel": "~1.5.8",
-    "featherlight": "~1.3.3"
+    "wow": "wow.js#~1.1.2"
   },
   "overrides": {
     "modernizr": {
@@ -20,10 +22,14 @@
       "main": [
         "./src/featherlight.js",
         "./src/featherlight.css"
-        ]
+      ]
     },
     "slick.js": {
-    "main" : ["slick/slick.min.js", "slick/slick.css", "slick/fonts/*"]
+      "main": [
+        "slick/slick.min.js",
+        "slick/slick.css",
+        "slick/fonts/*"
+      ]
     },
     "bootstrap-sass-official": {
       "main": [

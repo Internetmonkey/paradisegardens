@@ -1,5 +1,7 @@
 .hero {
 	min-height: 600px;
+	display: table;
+	width: 100%;
 	@include breakpoint(md) {
 		height: 75vh;
 	}
@@ -8,5 +10,14 @@
 .hero-image {
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 
+}
+
+.title-container {
+	display: table-cell;
+	vertical-align: top;
+	width: 100%;
+	color: $white;
+	padding: 8em 0;
 }

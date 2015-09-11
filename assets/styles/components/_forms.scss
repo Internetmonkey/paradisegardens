@@ -1,0 +1,22 @@
+.form-group {
+	label {
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 300;
+		font-size: 0.9em;
+	}
+}
+
+.form-control {
+	border-radius: 0;
+	border: 2px solid $mid-grey;
+	box-shadow: none;
+	outline: none;
+	height: 40px;
+	padding: 8px 15px;
+	&:focus {
+		border-color: $brand-primary;
+		box-shadow: none;
+		outline: none;
+	}
+}
