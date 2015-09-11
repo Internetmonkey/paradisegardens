@@ -211,7 +211,8 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
-
+  // Add class to drop down menus for custom styles
+  $('select').addClass("custom-select");
 
   // Match height of grid tiles
   $('.grid-match').matchHeight();

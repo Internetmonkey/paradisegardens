@@ -9,11 +9,11 @@ if ( $form ) {
 	$_title = $form->post_title;
 }
 ?>
-<div id="contact" class="contact page-section">
+<div id="contact" class="contact page-section wow fadeInUp">
 	<div class="container">
 	<?php if ( $headline && $content ) : ?>
 		<div class="row">
-			<div class="contact-before col-md-8 col-md-offset-2">
+			<div class="contact-before col-md-8 col-md-offset-2 text-center">
 				<h2 class="contact-headline headline"><?php echo $headline; ?></h2>
 				<div class="contact-content"><?php echo $content; ?></div>
 			</div>
@@ -23,7 +23,7 @@ if ( $form ) {
 		$shortcode = '[contact-form-7 id="' . $_id . '" title="' . $_title . '"]';
 	?>
 		<div class="row">
-			<div class="contact-form col-sm-12">
+			<div class="contact-form col-md-8 col-md-offset-2">
 				<?php echo do_shortcode( $shortcode ); ?>
 			</div>
 		</div>

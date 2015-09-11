@@ -1,4 +1,6 @@
+
 .form-group {
+	margin-bottom: 30px;
 	label {
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
@@ -8,15 +10,53 @@
 }
 
 .form-control {
-	border-radius: 0;
-	border: 2px solid $mid-grey;
+	border-radius: 2px;
+	border: 2px solid $gray-lighter;
 	box-shadow: none;
 	outline: none;
-	height: 40px;
-	padding: 8px 15px;
+	height: 44px;
+	padding: 10px 15px;
+	color: $black;
 	&:focus {
 		border-color: $brand-primary;
 		box-shadow: none;
 		outline: none;
+		.has-error & {
+			border-color: $brand-danger;
+			box-shadow: none;
+		}
+	}
+	.has-error & {
+		border-color: $brand-danger;
+		box-shadow: none;
 	}
 }
+
+.help-block {
+	position: relative;
+	.has-error & {
+		background: $brand-danger;
+		color: $white;
+		padding: 10px;
+		border-radius: 2px;
+		&:after {
+			bottom: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+			border-color: rgba(235, 50, 0, 0);
+			border-bottom-color: #eb3200;
+			border-width: 10px;
+			margin-left: -10px;
+		}
+	}
+
+}
+
+
+
+
