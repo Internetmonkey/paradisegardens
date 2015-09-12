@@ -5,10 +5,15 @@ $headline = get_field( 'signup_headline', 'options' );
 <div class="signup page-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
-				<h3 class="signup-heading heading"><?php echo $headline ?></h3>
+			<div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 text-center">
+				<h2 class="signup-heading heading"><?php echo $headline ?></h2>
 			</div>
-			<div class="signup-form-wrapper col-sm-12">
+			<div class="signup-form-wrapper col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+				<div class="widget-section-wrapper">
+				    <?php dynamic_sidebar('sidebar-footer'); ?>
+				  </div>
+			</div>
+			<!-- <div class="signup-form-wrapper col-sm-12">
 				<form class="signup-form">
 					<div class="form-group col-sm-4">
 						<label for="exampleInputName2">Name</label>
@@ -20,7 +25,9 @@ $headline = get_field( 'signup_headline', 'options' );
 					</div>
 					<button type="submit" class="btn btn-default">Send invitation</button>
 				</form>
-			</div>
+			</div> -->
+
+
 		</div>
 	</div>
-	
+</div>	

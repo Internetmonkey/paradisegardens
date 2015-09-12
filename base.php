@@ -20,13 +20,30 @@ use Roots\Sage\Wrapper;
     ?>
     <div class="wrap" role="document">
 
+      
+
         <?php include Wrapper\template_path(); ?>
 
         <?php if (Config\display_sidebar()) : ?>
-          <aside class="sidebar hello" role="complementary">
-            <?php include Wrapper\sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
+
+              <aside class="sidebar hello col-md-4" role="complementary">
+                <?php include Wrapper\sidebar_path(); ?>
+              </aside><!-- /.sidebar -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </section><!-- /.page-section -->
+
+        <?php else : ?>
+
+        </div><!-- /.row -->
+          </div><!-- /.container -->
+
+          </section><!-- /.page-section -->
+
+
         <?php endif; ?>
+
+
     </div><!-- /.wrap -->
 
     <?php get_template_part('templates/footer', 'contact'); ?>

@@ -13,14 +13,14 @@ if ( !empty($location) ) {
 }
 
 // Setup Columns (content becomes full width if no image)
-$columns = $image ? 'col-sm-4' : 'col-sm-12';
+$columns = $image ? 'col-sm-5 col-lg-4' : 'col-sm-12';
 
 ?>
-<div class="page-section location">
+<div class="page-section location" id="location">
 	<div class="container location-top">
 		<main class="row" role="main">
 		<?php if ( $image ) : ?>
-			<div class="image-container col-sm-8">
+			<div class="image-container col-sm-7 col-lg-8">
 				<img src="<?php echo $image['url']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>">
 			</div>
 		<?php endif; ?>

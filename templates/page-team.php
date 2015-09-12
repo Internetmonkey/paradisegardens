@@ -6,14 +6,14 @@ $team_content = get_field('meet_the_team_content');
 if ( ! $team_heading || ! $team_content || ! have_rows( 'team_member' ) ) return;
 
 ?>
-<div class="team page-section">
+<div class="team page-section" id="the-team">
 	<div class="container">
 		<div class="row">
-			<div class="meet-the-team col-md-6">
+			<div class="meet-the-team col-md-4">
 				<h2 class="headline team-headline"><?php echo $team_heading; ?></h2>
 				<div class="meet-the-team-content"><?php echo $team_content; ?></div>
 			</div><!-- /.meet-the-team -->
-			<div class="team-members col-md-6">
+			<div class="team-members col-md-7 col-lg-6 col-lg-offset-1">
 			<?php while ( have_rows( 'team_member' ) ) : the_row();
 				$member_title = get_sub_field( 'team_member_title' );
 				$member_bio = get_sub_field( 'team_member_bio' );

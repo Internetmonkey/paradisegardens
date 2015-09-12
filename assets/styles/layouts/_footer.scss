@@ -1,0 +1,81 @@
+.page-section.signup {
+	background: $mid-grey;
+	color: $white;
+	h2 {
+		color: $white;
+	}
+	.btn-primary {
+		background: $blue-grey;
+		border-color: $blue-grey;
+		margin-top: 26px;
+		&:hover, &:focus {
+			background: darken($black,5%);
+			border-color: darken($black,5%);
+		}
+	}
+	.widget-section-wrapper {
+		@extend .row;
+		form {
+
+			.form-group {
+				@include breakpoint(sm) {
+					@extend .col-sm-4;
+				}
+				
+			}
+			
+				
+			}
+			
+		}
+	}
+
+
+
+.content-info {
+	background: $blue-grey;
+	color: $white;
+	display: block;
+	margin: 0;
+	padding: 20px;
+	font-size: 0.85em;
+	font-weight: 300;
+}
+.footer-menu-left {
+	text-align: center;
+	@include breakpoint(sm) {
+		text-align: left;
+	}
+	.site-credits {
+		margin:0;
+		padding: 5px 10px;
+	}
+}
+.footer-menu-right {
+	text-align: center;
+	@include breakpoint(sm) {
+		text-align: right;
+	}
+	.footer-menu {
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				display: block;
+				margin-top: 15px;
+				@include breakpoint(sm) {
+					display: inline-block;
+					margin-top: 0;
+				}
+				a {
+					color: $white;
+					text-transform: uppercase;
+					display: block;
+					padding: 5px 10px;
+				}
+			}
+		}
+	}
+}
+

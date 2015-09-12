@@ -18,11 +18,7 @@ body.admin-bar {
 	}
 }
 
-.navbar-toggle {
-	float: left;
-	margin-left: 15px;
-	margin-right: 0;
-}
+
 
 .banner {
 	position: fixed;
@@ -34,7 +30,7 @@ body.admin-bar {
 	z-index: 10;
 	transition: .1s all ease;
 	
-		padding: 10px 0 0;
+		padding: 0;
 		@include breakpoint(sm) {
 			padding: 30px 0 0;
 		}
@@ -44,22 +40,25 @@ body.admin-bar {
 		}
 	
 	&.affix {
-		padding: 10px 0 0;
+		padding: 0;
 		border-bottom: 1px solid $gray-lighter;
+		@include breakpoint(sm) {
+			padding: 10px 0 0;
+		}
 	}
 }
 .navbar {
 	margin: 0;
 	border: none;
 }
-.navbar-default {
-	background: $white;
-	text-align: center;
-	border-radius: 0;
-	border: none;
-}
+
 .navbar-header {
 	float:none;
+	@include breakpoint(xs) {
+		text-align: right;
+		padding: 10px 15px;
+	}
+	
 }
 
 .navbar-brand {
@@ -75,13 +74,13 @@ body.admin-bar {
 		background-image: url(../../assets/images/pg_logo.png);
 	}
 	.affix-top & {
-			width: 260px;
-			height: 33px;
+			width: 240px;
+			height: 30px;
 		}
 		
 		.affix & {
-			width: 260px;
-			height: 33px;
+			width: 240px;
+			height: 30px;
 		}
 
 	@include breakpoint(sm) {
@@ -113,27 +112,247 @@ body.admin-bar {
 	
 }
 
-.navbar-nav {
-	float: none;
+.navbar-default {
+	background: $white;
 	text-align: center;
-	font-weight: 300;
-	@include breakpoint(sm) {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-	}
-	>li {
-		
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		@include breakpoint(sm) {
-			float: none;
-			display: inline-block;
+	border-radius: 0;
+	border: none;
+	.navbar-toggle {
+		position: absolute;
+		left:0;
+		top: 0px;
+		margin:0;
+		border-radius: 0;
+		border: none;
+		padding: 10px 5px;
+		height: 55px;
+		width: 50px;
+		text-align: center;
+		.icon-bar {
+			width: 30px;
+			border-radius: 0;
+			margin-left: auto;
+			margin-right: auto;
 		}
+		.icon-bar+.icon-bar {
+			margin-top: 6px;
+		}
+	}
+	.navbar-collapse {
+		background: $black;
+		padding:0;
+		@include breakpoint(sm) {
+			background: $white;
+		}
+	}
+	.navbar-nav {
+		float: none;
+		text-align: left;
+		font-weight: 300;
+		margin: 0;
+		@include breakpoint(sm) {
+			text-align: center;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+		ul {
+			position: static;
+			display: none;
+			top: 100%;
+			left: 0;
+			z-index: 99;
+			transition: all .1s ease;
+			@include breakpoint(sm) {
+				position: absolute;
+			}
+			ul {
+				top: 0;
+				left: 100%;
+			}
+		}
+		li {
+			position: relative;
+			transition: all .1s ease;
+			@include breakpoint(xs) {
+				clear:both;
+			}
+			&:hover {
+				@include breakpoint(sm) {
+					background: $green;
+					color: $white;
+					a {
+						background: $green;
+						color: $white !important;
+						&:hover {
+							background: darken($green, 5%);
+						}
+					}
+				}
+				
+				
+				>ul {
+					display: block;
+					width: 100%;
+					transition: all .1s ease;
+				}
+			}
 
+		}
+		
+		a {
+			display: block;
+			position: relative;
+			padding: 15px 25px;
+			font-weight: 300;
+			transition: all .1s ease;
+			
+			&:hover {
+				color: $white;
+					@include breakpoint(sm) {
+						background: darken($green, 5%);
+						color: $white ;
+					}
+				}
+		}
+		>li {
+			
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			border-bottom: 1px solid darken($mid-grey, 5%);
+			@include breakpoint(sm) {
+				border-bottom: none;
+				float: none;
+				display: inline-block;
+
+			}
+			>a {
+				color: $white;
+				@include breakpoint(sm) {
+					color: $black;
+				}
+				&:hover {
+					color: $white;
+
+					@include breakpoint(sm) {
+						background: darken($green, 5%);
+						color: $white !important;
+					}
+				}
+				&:focus {
+					@include breakpoint(xs) {
+						background: darken($black, 5%);
+						color: $white;
+					}
+					
+				}
+			}
+			&.active {
+				> a, > a:focus {
+					background: none;
+					.page-template-template-explore & {
+						color: $green;
+					}
+					.page-template-template-leasing & {
+						color: $blue-light;
+					}
+				}
+			}
+
+		}
 	}
 }
 
-.dropdown:hover .dropdown-menu {
+
+
+
+
+
+
+
+
+
+.dropdown-menu {
+	border: none;
+	border-radius: 0;
+	padding:0;
+	margin:0;
+	box-shadow: none;
+	>li {
+		@include breakpoint(xs) {
+			border-bottom: 1px solid $gray-light;
+		}
+		>a, >a:hover {
+			@include breakpoint(xs) {
+				background: $mid-grey;
+				color: $white;
+			}
+			
+		}
+		>a:focus {
+			@include breakpoint(xs) {
+				background: darken($black, 5%);
+			}
+		}
+	}
+}
+
+// #mobnav-btn {
+//   display: none;
+//   color: white;
+//   padding: 10px;
+//   cursor: pointer;
+// }
+.mobnav-subarrow {
+  display: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+@include breakpoint(xs) {
+  // #mobnav-btn {
+  //   display: block;
+  //   background: $mid-grey;
+  //   color: $white;
+  // }
+  .mobnav-subarrow {
     display: block;
+    background: $mid-grey;
+    color: $white;
+    border:none;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+  }
+  .navbar-nav {
+    width: 100%!important;
+    // display: none;
+    li {
+    	float: none!important;
+	    display: block!important;
+	    width: 100%!important;
+	    a {
+	    	float: none!important;
+	    }
+    }
+    ul {
+    	position: static!important;
+    	display: none!important;
+    }
+    &.xactive {
+    	display: block!important;
+    }
+  }
+  
+  .xpopdrop ul {
+    display: block!important;
+    width: 100%;
+  }
 }

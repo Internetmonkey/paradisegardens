@@ -14,14 +14,14 @@ if ( !$content || !$button_link ) return;
 // Fallback in case people are stupid
 $button_text =  $button_text ? $button_text : "View Masterplan";
 // Content will go full width if no image provided
-$columns = $image ? 'col-sm-4' : 'col-sm-12';
+$columns = $image ? 'col-sm-5 col-lg-4' : 'col-sm-12';
 
 ?>
 <div class="page-section masterplan" id="masterplan">
 <div class="container">
 	<main class="row" role="main">
 	<?php if ( $image ) : ?>
-		<div class="image-container col-sm-8">
+		<div class="image-container col-sm-7 col-lg-8">
 			<img src="<?php echo $image['url']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>">
 		</div>
 	<?php endif; ?>

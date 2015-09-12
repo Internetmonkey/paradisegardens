@@ -18,6 +18,9 @@ body {
 	@include breakpoint(sm) {
 		margin: 130px auto 0 auto;
 	}
+	@include breakpoint(md) {
+		margin: 180px auto 0 auto;
+	}
 }
 
 
@@ -44,6 +47,9 @@ h1, h2, .h1, .h2 {
 		color: $blue-light;
 	}
 }
+h2, .h2 {
+	margin-bottom: 0.75em;
+}
 
 .title-container,  {
 	display: table-cell;
@@ -69,3 +75,5 @@ h1, h2, .h1, .h2 {
 		border: 1px solid;
 	}
 }
+
+

@@ -216,7 +216,7 @@
   $('#mobnav-btn').click(
 
     function() {
-      $('.sf-menu').toggleClass("xactive");
+      $('.navbar-nav').toggleClass("xactive");
     });
 
   // TRIGGER DROP DOWN SUBS

@@ -1,0 +1,19 @@
+.page-section.team {
+	background: $blue-grey;
+	color: $white;
+	h2, p {
+		color: $white;
+	}
+	h3:first-of-type {
+		margin-top: 40px;
+	}
+	@include breakpoint(md) {
+		h3:first-of-type {
+			margin-top: 0;
+		}
+	}
+}
+
+.team-member-wrapper+.team-member-wrapper {
+	margin-top: 40px;
+}

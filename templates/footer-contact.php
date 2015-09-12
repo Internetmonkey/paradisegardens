@@ -23,7 +23,7 @@ if ( $form ) {
 		$shortcode = '[contact-form-7 id="' . $_id . '" title="' . $_title . '"]';
 	?>
 		<div class="row">
-			<div class="contact-form col-md-8 col-md-offset-2">
+			<div class="contact-form col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
 				<?php echo do_shortcode( $shortcode ); ?>
 			</div>
 		</div>

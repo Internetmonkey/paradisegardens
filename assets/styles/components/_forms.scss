@@ -1,6 +1,10 @@
 
 .form-group {
 	margin-bottom: 30px;
+	text-align: center;
+	@include breakpoint(sm) {
+		text-align: left;
+	}
 	label {
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
@@ -57,9 +61,13 @@
 
 }
 
+.alert-warning {
+	clear: both;
+}
+
 .contact-form {
 	.btn {
-		margin-top: 34px;
+		margin-top: 26px;
 	}
 }
 
