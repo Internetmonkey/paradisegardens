@@ -17,7 +17,7 @@ $button_text =  $button_text ? $button_text : "View Masterplan";
 $columns = $image ? 'col-sm-4' : 'col-sm-12';
 
 ?>
-<div class="page-section masterplan">
+<div class="page-section masterplan" id="masterplan">
 <div class="container">
 	<main class="row" role="main">
 	<?php if ( $image ) : ?>

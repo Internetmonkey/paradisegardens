@@ -28,7 +28,7 @@
         'depth'             => 2,
         'container'         => 'div',
         'container_class'   => 'collapse navbar-collapse pg-nav-collapse',
-        'menu_class'        => 'nav navbar-nav',
+        'menu_class'        => 'nav navbar-nav sf-menu',
         'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
         'walker'            => new Roots\Sage\Nav\BootstrapWalker(),)
         );

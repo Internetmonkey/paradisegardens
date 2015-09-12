@@ -211,13 +211,29 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+
+  // TRIGGER ACTIVE STATE
+  $('#mobnav-btn').click(
+
+    function() {
+      $('.sf-menu').toggleClass("xactive");
+    });
+
+  // TRIGGER DROP DOWN SUBS
+  $('.mobnav-subarrow').click(
+
+    function() {
+      $(this).parent().toggleClass("xpopdrop");
+    });
+
+
   // Add wrapping class to drop down menus for custom styles
   $( "select" ).wrap( "<div class='custom-select'></div>" );
 
   // Match height of grid tiles
   $('.grid-match').matchHeight();
 
-
+  // Smooth scroll to anchors
   $('a').click(function(){
                 $('html, body').animate({
                     scrollTop: $( $.attr(this, 'href') ).offset().top + -130

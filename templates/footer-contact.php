@@ -9,7 +9,7 @@ if ( $form ) {
 	$_title = $form->post_title;
 }
 ?>
-<div id="contact" class="contact page-section wow fadeInUp">
+<div id="contact" class="contact page-section wow fadeIn">
 	<div class="container">
 	<?php if ( $headline && $content ) : ?>
 		<div class="row">

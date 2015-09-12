@@ -1,0 +1,94 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+
+
+
+#mobnav-btn {
+  display: none;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+.mobnav-subarrow {
+  display: none;
+}
+
+.touch {
+	  #mobnav-btn {
+	    display: block;
+	  }
+	  .mobnav-subarrow {
+	    display: block;
+	    background-color: #0f3975;
+	    opacity: .3;
+	    border-bottom: 1px solid white;
+	    border-top: 1px solid black;
+	    height: 20px;
+	    width: 30px;
+	    background-position: top left!important;
+	    position: absolute;
+	    top: 8px;
+	    right: 10px;
+	    border-radius: 5px;
+	    cursor: pointer;
+	    transition: all .1s ease-in-out;
+	  }
+	  .sf-menu {
+	    width: 100%!important;
+	    // display: none;
+	  }
+	  .sf-menu.xactive {
+	    display: block!important;
+	  }
+	  .sf-menu li {
+	    float: none!important;
+	    display: block!important;
+	    width: 100%!important;
+	  }
+	  .sf-menu li a {
+	    float: none!important;
+	  }
+	  .sf-menu ul {
+	    position: static!important;
+	    display: none!important;
+	  }
+	  .xpopdrop ul {
+	    display: block!important;
+	    width: 100%;
+	  }
+	}
+

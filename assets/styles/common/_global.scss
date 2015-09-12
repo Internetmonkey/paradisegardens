@@ -40,6 +40,9 @@ h1, h2, .h1, .h2 {
 	.page-template-template-explore & {
 		color: $green;
 	}
+	.page-template-template-leasing & {
+		color: $blue-light;
+	}
 }
 
 .title-container,  {
@@ -57,7 +60,12 @@ h1, h2, .h1, .h2 {
 
 .more-link {
 	padding: 5px 10px;
+	border: 1px solid transparent;
 	border-bottom: 1px solid;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+	transition: all .3s ease;
+	&:hover {
+		border: 1px solid;
+	}
 }

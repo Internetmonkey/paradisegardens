@@ -23,7 +23,7 @@ use Roots\Sage\Wrapper;
         <?php include Wrapper\template_path(); ?>
 
         <?php if (Config\display_sidebar()) : ?>
-          <aside class="sidebar" role="complementary">
+          <aside class="sidebar hello" role="complementary">
             <?php include Wrapper\sidebar_path(); ?>
           </aside><!-- /.sidebar -->
         <?php endif; ?>
