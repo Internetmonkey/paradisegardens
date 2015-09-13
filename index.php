@@ -1,5 +1,14 @@
 
-<?php get_template_part('templates/page', 'header'); ?>
+
+<header >
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<?php get_template_part('templates/page', 'header'); ?>
+			</div>
+		</div>
+	</div>
+</header>
 
 <section class="page-section">
 <div class="container">
@@ -14,6 +23,7 @@
 <?php endif; ?>
 
 <?php while (have_posts()) : the_post(); ?>
+
 	<?php get_template_part('templates/content', get_post_type() != 'post' ? get_post_type() : get_post_format()); ?>
 
 <?php endwhile; ?>

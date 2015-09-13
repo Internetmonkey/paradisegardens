@@ -26,7 +26,7 @@ use Roots\Sage\Wrapper;
 
         <?php if (Config\display_sidebar()) : ?>
 
-              <aside class="sidebar hello col-md-4" role="complementary">
+              <aside class="sidebar col-md-4" role="complementary">
                 <?php include Wrapper\sidebar_path(); ?>
               </aside><!-- /.sidebar -->
             </div><!-- /.row -->

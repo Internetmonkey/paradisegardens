@@ -1,8 +1,9 @@
 .hero {
-	min-height: 600px;
+	min-height: 400px;
 	display: table;
 	width: 100%;
 	@include breakpoint(md) {
+		min-height: 600px;
 		height: 75vh;
 	}
 	.headline, .sub-headline {

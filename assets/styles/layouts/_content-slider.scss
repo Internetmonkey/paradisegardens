@@ -2,5 +2,18 @@
 	.slide-image{
 		min-height: 400px;
 		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+
+.slick-dots {
+	bottom: 0;
+		li, li.slick-active {
+			button {
+				&:before {
+				color: $white;
+			}
+		}
 	}
 }

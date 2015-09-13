@@ -11,7 +11,7 @@ $text_slick_args = '{"arrows":false, "fade":true, "asNavFor":".image-slider"}';
 if ( ! have_rows( 'slider_slides' ) || get_field( 'slider_active' ) === "false" ) return;
 
 ?>
-<div class="content-slider">
+<div class="content-slider" id="about">
 
 	<div class="image-slider" data-slick='<?php echo $img_slick_args; ?>'>
 	<?php while ( have_rows( 'slider_slides' ) ) : the_row();
@@ -26,13 +26,13 @@ if ( ! have_rows( 'slider_slides' ) || get_field( 'slider_active' ) === "false" 
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="text-slider col-md-6 col-md-offset-3" data-slick='<?php echo $text_slick_args; ?>'>
+			<div class="text-slider col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" data-slick='<?php echo $text_slick_args; ?>'>
 			<?php while ( have_rows( 'slider_slides' ) ) : the_row();
 				$slide_headline = get_sub_field('slide_headline');
 				$slide_content = get_sub_field('slide_content');
 			?>
-				<div class="slide-wrapper">
-					<h3 class="headline"><?php echo $slide_headline; ?></h3>
+				<div class="slide-wrapper text-center">
+					<h2 class="headline"><?php echo $slide_headline; ?></h3>
 					<div class="slide-content"><?php echo $slide_content; ?></div>
 				</div>
 			<?php endwhile; ?>

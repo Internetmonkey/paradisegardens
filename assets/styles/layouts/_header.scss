@@ -165,7 +165,9 @@ body.admin-bar {
 			transition: all .1s ease;
 			@include breakpoint(sm) {
 				position: absolute;
+
 			}
+
 			ul {
 				top: 0;
 				left: 100%;
@@ -195,6 +197,15 @@ body.admin-bar {
 					display: block;
 					width: 100%;
 					transition: all .1s ease;
+					@include breakpoint(sm) {
+
+				width: 200px;
+						left: 50%;
+						margin-left: -100px;
+						text-align: center;
+			}
+
+
 				}
 			}
 
