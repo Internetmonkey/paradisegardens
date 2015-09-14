@@ -33,14 +33,16 @@
 
 
 .content-info {
+	max-width: 1400px;
 	background: $blue-grey;
 	color: $white;
 	display: block;
-	margin: 0;
+	margin: 0 auto;
 	padding: 20px;
 	font-size: 0.85em;
 	font-weight: 300;
 }
+
 .footer-menu-left {
 	text-align: center;
 	@include breakpoint(sm) {
