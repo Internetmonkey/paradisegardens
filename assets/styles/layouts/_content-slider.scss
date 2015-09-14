@@ -1,3 +1,6 @@
+$slick-font-path: "../../../fonts/" !default;
+$slick-dot-character: "\f111" !default;
+
 .content-slider {
 	.slide-image{
 		min-height: 400px;
@@ -13,7 +16,35 @@
 			button {
 				&:before {
 				color: $white;
+				font-size: 10px;
+				content: $slick-dot-character;
+                
+                //font-family: $slick-font-family;
+                font-family: FontAwesome;
 			}
 		}
 	}
 }
+
+
+
+
+
+
+// .slick-dots {
+
+//     li {
+
+//         button {
+            
+//             &:before {
+
+//                 content: $slick-dot-character;
+                
+//                 font-family: $slick-font-family;
+                
+//             }
+//         }
+        
+//     }
+// }
