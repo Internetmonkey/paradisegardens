@@ -2,7 +2,7 @@
 $main_headline = get_field('main_headline');
 $columns = $main_headline ? 'col-sm-7 col-lg-8' : 'col-sm-12';
 ?>
-<div class="page-section content">
+<div class="page-section content wow fadeIn">
 <div class="container">
 	<main class="row" role="main">
 	<?php if ( $main_headline ) : ?>

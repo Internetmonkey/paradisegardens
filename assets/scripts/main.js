@@ -212,6 +212,13 @@
   $(document).ready(UTIL.loadEvents);
 
 
+  $(window).load(function () {
+        $('#preloader').fadeOut('slow', function () {
+            $(this).remove();
+        });
+    });
+
+
   // TRIGGER ACTIVE STATE
   $('#mobnav-btn').click(
 

@@ -22,11 +22,11 @@
 		padding: 10px 2px;
 		font-size: 1.2em;
 		transform: scale(1);
-		transition: .1s all ease;
+		transition: .3s all ease;
 		&:hover, &:focus {
 			background: $white;
 			color: $black;
-			transform: scale(1.1);
+			transform: scale(1.4);
 		}
 	}
 }

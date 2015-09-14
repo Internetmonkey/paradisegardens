@@ -34,7 +34,11 @@
 		border-color: $brand-danger;
 		box-shadow: none;
 	}
+	
 }
+textarea {
+		height: auto !important;
+	}
 
 .help-block {
 	position: relative;

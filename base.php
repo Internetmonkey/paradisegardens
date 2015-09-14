@@ -18,6 +18,14 @@ use Roots\Sage\Wrapper;
       do_action('get_header');
       get_template_part('templates/header');
     ?>
+
+    <div class="preloader" id="preloader">
+  
+        <div class="preload-graphic"></div>
+      
+    </div>
+
+    
     <div class="wrap" role="document">
 
       

@@ -6,7 +6,7 @@ $team_content = get_field('meet_the_team_content');
 if ( ! $team_heading || ! $team_content || ! have_rows( 'team_member' ) ) return;
 
 ?>
-<div class="team page-section" id="the-team">
+<div class="team page-section wow fadeIn" id="the-team">
 	<div class="container">
 		<div class="row">
 			<div class="meet-the-team col-md-4">

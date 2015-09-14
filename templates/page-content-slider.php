@@ -11,7 +11,7 @@ $text_slick_args = '{"arrows":false, "fade":true, "asNavFor":".image-slider"}';
 if ( ! have_rows( 'slider_slides' ) || get_field( 'slider_active' ) === "false" ) return;
 
 ?>
-<div class="content-slider" id="about">
+<div class="content-slider page-section" id="about">
 
 	<div class="image-slider" data-slick='<?php echo $img_slick_args; ?>'>
 	<?php while ( have_rows( 'slider_slides' ) ) : the_row();

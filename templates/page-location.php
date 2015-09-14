@@ -16,7 +16,7 @@ if ( !empty($location) ) {
 $columns = $image ? 'col-sm-5 col-lg-4' : 'col-sm-12';
 
 ?>
-<div class="page-section location" id="location">
+<div class="page-section location wow fadeIn" id="location">
 	<div class="container location-top">
 		<main class="row" role="main">
 		<?php if ( $image ) : ?>
