@@ -28,6 +28,7 @@
       "main": [
         "slick/slick.min.js",
         "slick/slick.css",
+        "slick/slick-theme.css",
         "slick/fonts/*"
       ]
     },
