@@ -4,8 +4,12 @@
 	.page-template-template-explore & {
 		background: $green;
 	}
+	.page-template-template-whats-on &, .category-news &, .category-events & {
+		background: $pink;
+	}
 	.contact-headline, .contact-content {
 		color: $white;
 	}
+
 	
 }
