@@ -238,10 +238,13 @@
   $( "select" ).wrap( "<div class='custom-select'></div>" );
 
   // Match height of grid tiles
-  $('.grid-match').matchHeight();
+  if ( $('.grid-match').length ) {
+      $('.grid-match').matchHeight();
+  }
+
 
   // Smooth scroll to anchors
-  $('a').click(function(){
+  $('.menu-item-type-custom a').click(function(){
                 $('html, body').animate({
                     scrollTop: $( $.attr(this, 'href') ).offset().top + -130
                 }, 500);
