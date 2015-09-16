@@ -1,0 +1,34 @@
+.feature-image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+	height: 220px;
+	@include breakpoint(sm) {
+		height: 300px;
+	}
+}
+
+.article-listing {
+	margin-bottom: 30px;
+	@include breakpoint(sm) {
+		margin-bottom: 50px;
+	}
+	a {
+		overflow: hidden;
+		transition: all .2s ease;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+			}
+		
+		
+	}
+	
+	h2 {
+		@extend h3;
+	}
+	
+}

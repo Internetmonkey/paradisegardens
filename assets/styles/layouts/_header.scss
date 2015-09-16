@@ -208,6 +208,7 @@ body.admin-bar {
 
 				}
 			}
+			
 
 		}
 		
@@ -315,6 +316,11 @@ body.admin-bar {
 			@include breakpoint(xs) {
 				background: darken($black, 5%);
 			}
+		}
+	}
+	>.active {
+		> a {
+			background: $orange;
 		}
 	}
 }

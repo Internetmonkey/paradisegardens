@@ -16,7 +16,7 @@ body {
 	position: relative;
 
 	@include breakpoint(sm) {
-		margin: 130px auto 0 auto;
+		margin: 150px auto 0 auto;
 	}
 	@include breakpoint(md) {
 		margin: 180px auto 0 auto;
@@ -45,7 +45,7 @@ h1, h2, .h1, .h2 {
 	.page-template-template-leasing & {
 		color: $blue-light;
 	}
-	.page-template-template-whats-on &, .category-news &, .category-events &, .blog &, .single-post & {
+	.page-template-template-whats-on &, .category-news &, .category-events &, .category-news &, .blog &, .single-post & {
 		color: $pink;
 	}
 }
@@ -70,7 +70,7 @@ a {
 		color: darken($blue-light, 10%);
 	}
 	}
-	.page-template-template-whats-on &, .category-news &, .category-events &, .blog &, .single-post & {
+	.page-template-template-whats-on &, .category-news &, .category-events &, .category-news &, .blog &, .single-post & {
 		color: $pink;
 		&:hover, &:focus {
 		color: darken($pink, 10%);
