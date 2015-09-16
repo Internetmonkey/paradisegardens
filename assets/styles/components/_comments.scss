@@ -1,3 +1,16 @@
+.comments {
+	border-top: 1px solid $gray-lighter;
+	margin-top: 30px;
+	padding-top: 30px;
+	@include breakpoint(sm) {
+		margin-top: 50px;
+		padding-top: 50px;
+	}
+	> h2 {
+		@extend .h3;
+	}
+}
+
 .comment-list {
   @include list-unstyled;
 }
@@ -5,7 +18,18 @@
   list-style: none;
 }
 .comment-form p {
-  @extend .form-group;
+  /* @extend .form-group; */
+}
+.comment-form {
+	p {
+		margin-bottom: 30px;
+	}
+	label {
+		text-transform: uppercase;
+	    letter-spacing: .1em;
+	    font-weight: 300;
+	    font-size: .9em;
+	}
 }
 .comment-form input[type="text"],
 .comment-form input[type="email"],
@@ -16,4 +40,10 @@
 .comment-form input[type="submit"] {
   @extend .btn;
   @extend .btn-primary;
+}
+
+
+.comment-reply-link {
+	@extend .btn;
+	border: 2px solid $gray-lighter;
 }

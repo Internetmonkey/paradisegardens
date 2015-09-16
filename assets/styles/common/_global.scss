@@ -45,7 +45,7 @@ h1, h2, .h1, .h2 {
 	.page-template-template-leasing & {
 		color: $blue-light;
 	}
-	.page-template-template-whats-on &, .category-news &, .category-events & {
+	.page-template-template-whats-on &, .category-news &, .category-events &, .blog &, .single-post & {
 		color: $pink;
 	}
 }
@@ -70,7 +70,7 @@ a {
 		color: darken($blue-light, 10%);
 	}
 	}
-	.page-template-template-whats-on &, .category-news &, .category-events & {
+	.page-template-template-whats-on &, .category-news &, .category-events &, .blog &, .single-post & {
 		color: $pink;
 		&:hover, &:focus {
 		color: darken($pink, 10%);
