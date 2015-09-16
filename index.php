@@ -1,4 +1,16 @@
+<?php
 
+if ( is_category() || is_home() ) :
+
+	$queried_object = get_queried_object();
+	
+	if ( get_field( 'header_image', $queried_object ) ) :
+
+		get_template_part('templates/archive', 'hero');
+
+	endif;
+
+else : ?>
 
 <header >
 	<div class="container">
@@ -9,6 +21,8 @@
 		</div>
 	</div>
 </header>
+
+<?php endif; ?>
 
 <section class="page-section">
 <div class="container">
