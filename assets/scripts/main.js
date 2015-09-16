@@ -250,7 +250,7 @@
   }
 
   // Set full URLs on sub menu items with '#' Urls
-  $('.menu-item-type-custom a').each(
+  $( '.menu-item-has-children .menu-item-type-custom a').each(
     function(){
       var $link = $(this);
       var oldUrl = $link.attr('href');
@@ -268,15 +268,12 @@
 
   // Smooth scroll to anchors
   $('.menu-item-type-custom a').click(function(event){
-    console.log('click event called');
-
     var link = {};
     link.url = $.attr(this, 'href');
     link.page = extractPageUrl( link.url );
     link.currentPage = extractPageUrl( window.location.href );
     link.destination = extractHash( link.url );
 
-    console.log(link);
     if (link.currentPage !== link.page ) {
       return true;
     }
@@ -287,7 +284,6 @@
     });
 
   function maybeScrollTo( selector ) {
-    console.log(selector);
     if ($(selector).length ) {
       $('html, body').animate({
                       scrollTop: $( selector ).offset().top + -130
@@ -296,7 +292,12 @@
   }
 
   function extractPageUrl(url){
-    var page = url.split('//').pop();
+    var page;
+    // return current page for #links 
+    if (url.substring(0,1) === '#' ){
+      return extractPageUrl(window.location.href);
+    }
+    page = url.split('//').pop();
     page = page.split('#').shift();
     return page;
   }
