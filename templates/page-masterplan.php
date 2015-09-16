@@ -15,9 +15,11 @@ if ( !$content || !$button_link ) return;
 $button_text =  $button_text ? $button_text : "View Masterplan";
 // Content will go full width if no image provided
 $columns = $image ? 'col-sm-5 col-lg-4' : 'col-sm-12';
+$_the_post = get_post();
+$page_name = $_the_post->post_name;
 
 ?>
-<div class="page-section masterplan wow fadeIn" id="masterplan">
+<div class="page-section masterplan wow fadeIn" id="<?php echo $page_name; ?>-masterplan">
 <div class="container">
 	<main class="row" role="main">
 	<?php if ( $image ) : ?>
