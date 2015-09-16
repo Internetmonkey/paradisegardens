@@ -267,8 +267,19 @@ body.admin-bar {
 					.page-template-template-leasing & {
 						color: $blue-light;
 					}
+					.blog &, .category & {
+						color: $pink;
+					}
 				}
+
 			}
+			&.current_page_parent {
+					>a, >a:focus {
+						.category &, .single-post & {
+							color: $pink;
+						}
+					}
+				}
 
 		}
 	}
