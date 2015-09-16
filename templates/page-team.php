@@ -19,7 +19,7 @@ if ( ! $team_heading || ! $team_content || ! have_rows( 'team_member' ) ) return
 				$member_bio = get_sub_field( 'team_member_bio' );
 			?>
 				<div class="team-member-wrapper">
-					<h3 class="member-headline headline"><?php echo $member_title; ?></h3>
+					<h3 class="member-headline headline h2"><?php echo $member_title; ?></h3>
 					<div class="member-bio"><?php echo $member_bio; ?></div>
 				</div><!-- /.team-member-wrapper -->
 			<?php endwhile; ?>

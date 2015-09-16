@@ -3,7 +3,7 @@
 	margin-bottom: 30px;
 	text-align: center;
 	@include breakpoint(sm) {
-		text-align: left;
+		text-align: center;
 	}
 	label {
 		text-transform: uppercase;
@@ -67,6 +67,20 @@ textarea {
 
 .alert-warning {
 	clear: both;
+	background: $orange;
+	border-color: $orange;
+	color: $white;
+	text-align: center;
+	&:before {
+		content: "\f071";
+		font-family: FontAwesome;
+		display: block;
+	}
+}
+div.wpcf7 img.ajax-loader {
+	display: block;
+	clear: both;
+	margin: 10px auto !important;
 }
 
 .contact-form {
@@ -75,5 +89,14 @@ textarea {
 	}
 }
 
+.form-inline {
+	.input-group {
+		width: 100%;
+		.input-group-btn {
+			width: 120px;
+		}
+	}
+
+}
 
 

@@ -3,3 +3,18 @@
 		margin-bottom: 50px;
 	}
 }
+
+.juiz_last_tweet_widget {
+
+}
+.juiz_last_tweet_tweetlist {
+	list-style: none;
+	padding:0;
+	li {
+		margin-bottom: 25px;
+	}
+	.juiz_last_tweet_footer_item {
+		display: block;
+		font-size: 0.8em;
+	}
+}
