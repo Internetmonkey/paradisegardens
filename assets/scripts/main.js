@@ -22,6 +22,9 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+        if ( window.location.hash ){
+          maybeScrollTo( window.location.hash );
+        }
       }
     },
     // Explore page
@@ -91,6 +94,9 @@
 
   function render_map( $el ) {
 
+    var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];
+
+
     // var
     var $markers = $el.find('.marker');
 
@@ -99,7 +105,8 @@
       scrollwheel : false,
       zoom    : 16,
       center    : new google.maps.LatLng(0, 0),
-      mapTypeId : google.maps.MapTypeId.ROADMAP
+      mapTypeId : google.maps.MapTypeId.ROADMAP,
+      styles: styles
     };
 
     // create map           
@@ -242,14 +249,62 @@
       $('.grid-match').matchHeight();
   }
 
+  // Set full URLs on sub menu items with '#' Urls
+  $('.menu-item-type-custom a').each(
+    function(){
+      var $link = $(this);
+      var oldUrl = $link.attr('href');
+      var parentUrl;
+
+      if (oldUrl.substring(0,1) !== '#' ) { 
+        return; 
+      }
+
+      parentUrl = $link.closest( '.menu-item-has-children').children('a').attr('href');
+
+      $(this).attr('href', parentUrl + oldUrl );
+    }
+  );
 
   // Smooth scroll to anchors
-  $('.menu-item-type-custom a').click(function(){
-                $('html, body').animate({
-                    scrollTop: $( $.attr(this, 'href') ).offset().top + -130
-                }, 500);
-                return false;
-            });
+  $('.menu-item-type-custom a').click(function(event){
+    console.log('click event called');
+
+    var link = {};
+    link.url = $.attr(this, 'href');
+    link.page = extractPageUrl( link.url );
+    link.currentPage = extractPageUrl( window.location.href );
+    link.destination = extractHash( link.url );
+
+    console.log(link);
+    if (link.currentPage !== link.page ) {
+      return true;
+    }
+    
+    event.preventDefault();
+    maybeScrollTo( link.destination );
+
+    });
+
+  function maybeScrollTo( selector ) {
+    console.log(selector);
+    if ($(selector).length ) {
+      $('html, body').animate({
+                      scrollTop: $( selector ).offset().top + -130
+                  }, 500);
+    }
+  }
+
+  function extractPageUrl(url){
+    var page = url.split('//').pop();
+    page = page.split('#').shift();
+    return page;
+  }
+
+  function extractHash(url){
+    var hash = '#' + url.split('#').pop();
+    return hash;
+  }
 
   // Initialise wow
   wow = new WOW({
