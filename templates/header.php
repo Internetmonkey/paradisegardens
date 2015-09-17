@@ -4,7 +4,7 @@
 
 ?>
 
-<header class="banner" role="banner"  data-spy="affix" data-offset-top="60">
+<header class="banner" role="banner"  data-spy="affix" data-offset-top="120">
 <nav class="navbar navbar-default " role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -18,6 +18,10 @@
       <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
           <span class="sr-only"><?php bloginfo('name'); ?></span>
       </a>
+    </div>
+
+    <div class="hidden-xs home-icon-container">
+      <a href="<?php bloginfo('url'); ?>" class="home-icon"></a>
     </div>
 
       <?php

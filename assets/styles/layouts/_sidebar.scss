@@ -1,9 +1,20 @@
 .sidebar {
+
 	h3:first-of-type {
 		margin-top: 0;
 	}
 	.widget {
-		margin-bottom: 50px;
+		margin-bottom: 40px;
+		border-top: 1px solid $gray-lighter;
+		padding-top: 40px;
+		@include breakpoint(sm) {
+			margin-bottom: 60px;
+			
+		}
+		@include breakpoint(md) {
+			border-top: none;
+			padding-top:0;
+		}
 	}
 	.widget_categories {
 		ul {

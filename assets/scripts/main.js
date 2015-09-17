@@ -46,6 +46,14 @@
         $('.image-slider').slick();
         $('.text-slider').slick();
       }
+    },
+    // Default Page 
+    'page': {
+      init: function() {
+        // JavaScript to be fired on the default page
+        $('.image-slider').slick();
+        $('.text-slider').slick();
+      }
     }
   };
 

@@ -38,12 +38,29 @@ body.admin-bar {
 		@include breakpoint(md) {
 			padding: 40px 0 0;
 		}
-	
+	.home-icon-container {
+		display: block;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left:10px;
+		bottom:5px;
+		visibility: hidden;
+		opacity: 0;
+		transition: all .5s ease;
+	}
 	&.affix {
 		padding: 0;
 		border-bottom: 1px solid $gray-lighter;
 		@include breakpoint(sm) {
-			padding: 10px 0 0;
+			padding: 0;
+			.navbar-header {
+				display: none;
+			}
+			.home-icon-container {
+				visibility: visible;
+				opacity: 1;
+			}
 		}
 	}
 }
@@ -110,6 +127,16 @@ body.admin-bar {
 		}
 	}
 	
+}
+
+.home-icon {
+	width: 40px;
+    height: 40px;
+    background-image: url(../../assets/images/bird-graphic.svg);
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
 }
 
 .navbar-default {
@@ -208,7 +235,7 @@ body.admin-bar {
 
 				}
 			}
-			
+
 
 		}
 		

@@ -50,7 +50,7 @@
         {
             "key": "field_55ef7b3146783",
             "label": "Top Link",
-            "name": "block_grid_top_link_text",
+            "name": "block_grid_top_link",
             "type": "page_link",
             "instructions": "",
             "required": 0,
@@ -63,9 +63,7 @@
             "post_type": [
                 "page"
             ],
-            "taxonomy": [
-
-            ],
+            "taxonomy": [],
             "allow_null": 0,
             "multiple": 0
         },
@@ -151,9 +149,7 @@
             "post_type": [
                 "page"
             ],
-            "taxonomy": [
-
-            ],
+            "taxonomy": [],
             "allow_null": 0,
             "multiple": 0
         },
@@ -196,5 +192,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1441778230
+    "modified": 1442454666
 }
