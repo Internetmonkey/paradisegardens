@@ -4,6 +4,11 @@
 $autoplay = get_field( 'slider_auto' );
 $autoplay_speed = get_field( 'slider_delay' );
 
+// Some error checking and default setting
+if ( !$autoplay_speed || !is_int($autoplay_speed) ) {
+	$autoplay_speed = 6000;
+}
+
 $img_slick_args = '{"arrows":false, "dots":true, "autoplay":' . $autoplay . ', "autoplaySpeed":' . $autoplay_speed .  ', "fade":true, "asNavFor":".text-slider"}';
 
 $text_slick_args = '{"arrows":false, "fade":true, "asNavFor":".image-slider"}';

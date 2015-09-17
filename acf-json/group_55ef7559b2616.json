@@ -65,13 +65,13 @@
                 [
                     {
                         "field": "field_55ef756c013e0",
-                        "operator": "!=",
-                        "value": "false"
+                        "operator": "==",
+                        "value": "true"
                     },
                     {
                         "field": "field_55ef76b5013e5",
                         "operator": "==",
-                        "value": "1"
+                        "value": "true"
                     }
                 ]
             ],
@@ -202,5 +202,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1441820878
+    "modified": 1442482344
 }
