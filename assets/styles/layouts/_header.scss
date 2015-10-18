@@ -85,10 +85,10 @@ body.admin-bar {
 	background-size: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url(../../assets/images/pg_logo.svg);
+	background-image: url(../../dist/images/pg_logo.svg);
 	transition: .1s all ease;
 	.no-svg & {
-		background-image: url(../../assets/images/pg_logo.png);
+		background-image: url(../../dist/images/pg_logo.png);
 	}
 	.affix-top & {
 			width: 240px;
@@ -132,7 +132,7 @@ body.admin-bar {
 .home-icon {
 	width: 40px;
     height: 40px;
-    background-image: url(../../assets/images/bird-graphic.svg);
+    background-image: url(../../dist/images/bird-graphic.svg);
     background-size: 40px 40px;
     background-repeat: no-repeat;
     background-position: center;

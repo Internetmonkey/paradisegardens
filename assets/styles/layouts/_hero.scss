@@ -9,6 +9,13 @@
 	.headline, .sub-headline {
 		color: $white;
 	}
+	.sub-headline {
+		font-size: 1.3em;
+		@include breakpoint(sm) {
+			font-size: 1.5em;
+		}
+		
+	}
 }
 
 .hero-image {

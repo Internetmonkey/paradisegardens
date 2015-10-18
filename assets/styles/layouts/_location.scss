@@ -2,8 +2,14 @@
 	padding-bottom: 0;
 	.acf-map {
 		width: 100%;
-		height: 600px;
+		height: 350px;
 		border: #ccc solid 1px;
 		margin: 40px 0 0;
+		@include breakpoint (sm) {
+			height: 500px;
+		}
+		@include breakpoint (md) {
+			height: 600px;
+		}
 	}
 }
