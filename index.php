@@ -24,6 +24,22 @@ else : ?>
 
 <?php endif; ?>
 
+
+
+
+
+
+<section class="page-section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<?php echo(get_post_field('post_content',10)); ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+
 <section class="page-section">
 <div class="container">
 	<div class="row">
