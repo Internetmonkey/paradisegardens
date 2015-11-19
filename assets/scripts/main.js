@@ -226,12 +226,17 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+  setTimeout(function(){
+      $('#preloader').fadeOut('slow', function () {
+          $(this).remove();
+      });
+  }, 1000);
 
-  $(window).load(function () {
-        $('#preloader').fadeOut('slow', function () {
-            $(this).remove();
-        });
-    });
+  // $(window).load(function () {
+  //       $('#preloader').fadeOut('slow', function () {
+  //           $(this).remove();
+  //       });
+  //   });
 
 
   // TRIGGER ACTIVE STATE
